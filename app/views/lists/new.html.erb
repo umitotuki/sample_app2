@@ -5,7 +5,10 @@
   <h4>本文</h4>
   <%= f.text_area :body %>
   
-  <%= link_to "編集", edit_list_path(@list.id) %> 
+  <h4>画像</h4>
+  <%= f.file_field :image, accept: "image/*" %>
   
   <%= f.submit "投稿" %>
 <% end %>
+
+<%= link_to "編集", edit_list_path(@list.id) %> 
